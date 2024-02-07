@@ -522,7 +522,7 @@
                 </span>
               </span>
               <div class="home-btn-group">
-                <button class="buttonFilled">Get in touch</button>
+                <button class="buttonFilled" onclick="scrollToContact()">Get in touch</button>
                 <button class="buttonFlat" onclick="openNewPage()">Learn More&nbsp;→</button>
               </div>
             </div>
@@ -763,6 +763,16 @@
           <footer class="footerContainer home-footer1">
             <div class="home-container6">
             </div>
+            <div class="contact-section" , id="contact">
+              <h3>Contact Us</h3>
+              <div class="contact-section contact-info">
+                <div class="phone-numbers">
+                  <p>WhatsApp: <span class="phone-number">+447463445077</span></p>
+                  <p>WhatsApp: <span class="phone-number">+447988906870</span></p>
+                </div>
+                <p>Email: <a href="mailto:support@networkingsolutionservices.com">support@networkingsolutionservices.com</a></p>
+              </div>
+            </div>
             <div class="home-separator"></div>
             <div class="home-container7">
               <span class="home-text52">
@@ -772,7 +782,8 @@
                 
               </div>
             </div>
-          </footer>
+          </footer>  
+        </div>
         </div>
       </div>
     </div>
@@ -784,6 +795,14 @@
       function openNewPage() {
         // Replace 'new_page.html' with the URL of the page you want to open
         window.location.href = 'https://en.wikipedia.org/wiki/Foreign_exchange_market#:~:text=The%20foreign%20exchange%20market%20(forex,for%20the%20trading%20of%20currencies.';
+      }
+    </script>
+    <script>
+      function scrollToContact() {
+        const contactSection = document.querySelector('.contact-section');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     </script>
   </body>
