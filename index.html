@@ -428,10 +428,10 @@
             <span class="logo">Networking Solutions</span>
             <div data-thq="thq-navbar-nav" class="home-desktop-menu">
               <nav class="home-links">
-                <span class="home-nav12 bodySmall">Home</span>
-                <span class="home-nav2 bodySmall">Services</span>
-                <span class="home-nav3 bodySmall">Solutions</span>
-                <span class="home-nav5 bodySmall">Contact</span>
+                <div><button class="buttonFilled" onclick="scrollToLogo()">Home</button></div>
+                <div><button class="buttonFilled" onclick="scrollToFeatures()">Services</button></div>
+                <div><button class="buttonFilled" onclick="scrollToFAQs()">FAQs</button></div>
+                <div><button class="buttonFilled" onclick="scrollToContact()">Contact</button></div>
               </nav>
             </div>
             <div data-thq="thq-burger-menu" class="home-burger-menu">
@@ -460,7 +460,7 @@
                   </div>
                 </div>
                 <nav class="home-links1">
-                  <span>Home</span>
+                  <button>Home</button>
                   <span class="home-nav21 bodySmall">Services</span>
                   <span class="home-nav31 bodySmall">Solutions</span>
                   <span class="home-nav51 bodySmall">Contact</span>
@@ -522,8 +522,8 @@
                 </span>
               </span>
               <div class="home-btn-group">
-                <button class="buttonFilled" onclick="scrollToContact()">Get in touch</button>
-                <button class="buttonFlat" onclick="openNewPage()">Learn More&nbsp;→</button>
+                <button class="buttonFilled" onclick="scrollToContact()">Get in Touch</button>
+                <button class="buttonFilled" onclick="openNewPage()">Learn More&nbsp;→</button>
               </div>
             </div>
           </div>
@@ -672,7 +672,6 @@
                 </span>
               </span>
             </span>
-            <button class="buttonFilled">Learn more</button>
           </div>
         </div>
         <div class="home-faq">
@@ -805,5 +804,30 @@
         }
       }
     </script>
+    <script>
+      function scrollToFeatures() {
+        const featureSection = document.querySelector('.home-features');
+        if (featureSection) {
+          featureSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
+    <script>
+      function scrollToLogo() {
+        const logoSection = document.querySelector('.home-hero');
+        if (logoSection) {
+          logoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
+    <script>
+      function scrollToFAQs() {
+        const faqSection = document.querySelector('.home-faq');
+        if (faqSection) {
+          faqSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
+    
   </body>
 </html>
